@@ -4,7 +4,7 @@ with open('input.txt') as input:
 frequencyChanges = [int(change.strip()) for change in frequencyChanges]
 
 frequency = 0
-knownFrequencies = [frequency]
+knownFrequencies = {frequency}
 searching = True
 
 while searching:
@@ -13,6 +13,6 @@ while searching:
         if frequency in knownFrequencies:
             searching = False
             break
-        knownFrequencies.append(frequency)
+        knownFrequencies.add(frequency)
 
 print(frequency)
